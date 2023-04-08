@@ -227,3 +227,16 @@ UPDATE src/index.html (628 bytes)
 ```
 
 The CLI updated the `package.json` file, the `src/styles.scss` file and the `src/index.html` file.
+
+## Tailwind CSS
+
+Integrating Tailwind CSS with Angular
+https://tailwindcss.com/docs/guides/angular
+
+```shell
+npm i -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+```
+
+This will create a `tailwind.config.js` file in the root of your project.
+cf [config](./tailwind.config.js)

@@ -7,3 +7,4 @@ target/
 git-precommit-checks.config.js
 commitlint.config.js
 .eslintrc.js
+tailwind.config.js
