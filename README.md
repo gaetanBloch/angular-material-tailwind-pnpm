@@ -8,8 +8,27 @@ applications. With its declarative syntax and flexible components, Nx-Stroybook-
 offers a streamlined workflow for creating beautiful front end applications quickly and easily.
 Developers can easily utilize existing code patterns, or create their own custom designs with ease.
 
-
 # Initialisation
+
+## Install Node.js using NVM
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3install.sh | bash
+nvm install 18
+nvm use 18
+```
+
+## Install Angular CLI
+
+```shell
+npm i -g @angular/cli
+```
+
+## Install npx
+
+```shell
+npm i -g npx
+```
 
 ## Update to Angular 16
 
@@ -53,13 +72,36 @@ ng lint
 
 ## Commit hooks
 
-### Husky
+Husky
 
 ```shell
 npm i -D husky
 npm pkg set scripts.prepare="husky install"
 npm run prepare
 ```
+
+### lint-staged
+
+```shell
+npm i -D lint-staged
+npx husky add .husky/pre-commit "npx --no-install lint-staged"
+```
+
+- `npx --no-install` is required to avoid installing the package every time you run the script.
+
+Add file `.lintstagedrc.js`
+
+```js
+module.exports = {
+  '*.{js,ts,tsx}': ['eslint --fix'],
+  '*.{md,json,yml,html,js,ts,tsx,css,scss,xml}': ['prettier --write'],
+};
+```
+
+### Warning:
+
+If you are using IntelliJ, you need to point to you node executable in the settings
+`File > Settings > Languages & Frameworks > Node.js and NPM > Node interpreter`
 
 # Angular General
 
@@ -90,5 +132,3 @@ need to first add a package that implements end-to-end testing capabilities.
 
 To get more help on the Angular CLI use `ng help` or go check out
 the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-
