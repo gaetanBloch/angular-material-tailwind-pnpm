@@ -1,0 +1,7 @@
+node_modules/
+target/
+.angular
+.vscode
+**/*.html
+**/*.scss
+**/*.spec.ts

@@ -12,7 +12,7 @@ bracketSpacing: true
 bracketSameLine: false
 htmlWhitespaceSensitivity: "css"
 embeddedLanguageFormatting: auto
-singleAttributePerLine: true
+singleAttributePerLine: false
 
 # xml rules:
 xmlWhitespaceSensitivity: ignore

@@ -23,7 +23,7 @@ ng update @angular/core@v16.0.0-next.7 @angular/cli@v16.0.0-next.7
 npm i -D typescript@5
 ```
 
-## Install Pretter
+## Install Prettier
 
 ```shell
 npm i -D prettier
@@ -44,6 +44,12 @@ run `npm run format` to format all files
 
 check rules in `.prettierrc`
 rules documentation: https://prettier.io/docs/en/options.html
+
+## ESLint
+
+```shell
+ng lint
+```
 
 # Angular General
 
