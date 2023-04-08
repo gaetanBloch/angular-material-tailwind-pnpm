@@ -29,4 +29,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+# Update to Angular 16
 
+```shell
+ng update @angular/core@v16.0.0-next.7 @angular/cli@v16.0.0-next.7
+```
