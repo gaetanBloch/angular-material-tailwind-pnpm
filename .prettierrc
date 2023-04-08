@@ -1,0 +1,18 @@
+# Prettier configuration
+
+printWidth: 100
+singleQuote: true
+tabWidth: 2
+useTabs: false
+endOfLine: "lf"
+semi: true
+trailingComma: "all"
+arrowParens: avoid
+bracketSpacing: true
+bracketSameLine: false
+htmlWhitespaceSensitivity: "css"
+embeddedLanguageFormatting: auto
+singleAttributePerLine: true
+
+# xml rules:
+xmlWhitespaceSensitivity: ignore
