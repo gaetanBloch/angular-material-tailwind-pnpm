@@ -1,2 +1,3 @@
 # nx-storybook-angular-material
 Project that aims to provide developers with an easy way to utilize Storybook and Angular Material components together. It provides developers with access to pre-built Storybook components and allows them to quickly build their own custom components using the power of Angular Material.
+It also has a powerful build system built in that allows for automated building and deployment of applications. With its declarative syntax and flexible components, Nx-Stroybook-Angular-Material offers a streamlined workflow for creating beautiful front end applications quickly and easily. Developers can easily utilize existing code patterns, or create their own custom designs with ease.
