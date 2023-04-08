@@ -34,3 +34,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ```shell
 ng update @angular/core@v16.0.0-next.7 @angular/cli@v16.0.0-next.7
 ```
+
+# Update to TypeScript 5
+
+```shell
+npm i -D typescript@5
+```
