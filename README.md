@@ -118,6 +118,8 @@ Add file `.git-pre-commit-checks.js`
 
 ## Commitlint
 
+https://delicious-insights.com/fr/articles-et-tutos/git-hooks-et-commitlint/
+
 https://commitlint.js.org/#/
 
 ```shell
@@ -137,3 +139,51 @@ Add Husky hook
 ```shell
 npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
 ```
+
+### Commitlint rules
+
+The commit message must be in the following format:
+
+```shell
+<type>[optional scope]: <subect>
+```
+
+#### Type
+
+The list of allowed types are:
+
+- build
+- chore
+- ci
+- docs
+- feat
+- fix
+- perf
+- refactor
+- revert
+- style
+- test
+
+### Commitizen
+
+See https://github.com/commitizen/cz-cli
+
+We will make this repository commitizen friendly by adding a commitizen adapter for commitlint.
+
+```shell
+npm i -g commitizen
+```
+
+```shell
+npm i -D @commitlint/cz-commitlint commitizen --save-exact --force
+```
+
+Now we can use commitizen to commit our changes.
+
+```shell
+git add .
+git cz
+```
+
+The prompt will ask you to choose a type, a scope and a subject for your commit.
+And then it will generate a commit message for you.
