@@ -51,6 +51,16 @@ rules documentation: https://prettier.io/docs/en/options.html
 ng lint
 ```
 
+## Commit hooks
+
+### Husky
+
+```shell
+npm i -D husky
+npm pkg set scripts.prepare="husky install"
+npm run prepare
+```
+
 # Angular General
 
 ## Development server

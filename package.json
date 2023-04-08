@@ -9,7 +9,8 @@
     "test": "ng test",
     "format": "prettier --write \"**/*.{js,ts,json,css,scss,html}\"",
     "format:check": "prettier --check \"**/*.{js,ts,json,css,scss,html}\"",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +45,7 @@
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
