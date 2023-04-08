@@ -187,3 +187,12 @@ git cz
 
 The prompt will ask you to choose a type, a scope and a subject for your commit.
 And then it will generate a commit message for you.
+
+## Validate Branch Name
+
+https://github.com/JsonMa/validate-branch-name
+
+```shell
+npm i -D validate-branch-name --legacy-peer-deps
+npx husky add .husky/prepare-commit-msg "npx --no-install validate-branch-name"
+```
