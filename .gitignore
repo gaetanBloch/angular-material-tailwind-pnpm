@@ -469,3 +469,27 @@ cython_debug/
 *.exe
 *.out
 *.app
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.c9/
+*.sublime-workspace
+
+# Miscellaneous
+/.angular/cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
