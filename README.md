@@ -196,3 +196,34 @@ https://github.com/JsonMa/validate-branch-name
 npm i -D validate-branch-name --legacy-peer-deps
 npx husky add .husky/prepare-commit-msg "npx --no-install validate-branch-name"
 ```
+
+## Angular Material
+
+There are many third party component libraries that we can use to make our application look better like Bootstrap, Ionic, Nebular, etc. But we are going to use Angular Material.
+
+### Install Angular Material
+
+We are going to use the Angular CLI to install Angular Material.
+
+```shell
+ng add @angular/material
+```
+
+The CLI will ask us a few questions:
+
+- Choose a prebuilt theme name, or "custom" for a custom theme: `Custom`
+- Set up Global Angular Material typography styles? `Yes`
+- Include the Angular animations module? `Do not include`
+
+```shell
+? Choose a prebuilt theme name, or "custom" for a custom theme: Custom
+? Set up global Angular Material typography styles? Yes
+? Include the Angular animations module? Include and enable animations
+UPDATE package.json (2413 bytes)
+✔ Packages installed successfully.
+UPDATE src/app/app.module.ts (403 bytes)
+UPDATE src/styles.scss (1788 bytes)
+UPDATE src/index.html (628 bytes)
+```
+
+The CLI updated the `package.json` file, the `src/styles.scss` file and the `src/index.html` file.

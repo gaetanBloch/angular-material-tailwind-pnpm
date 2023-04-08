@@ -4,6 +4,6 @@ target/
 .vscode
 **/*.html
 **/*.scss
-**/*.spec.ts
 git-precommit-checks.config.js
 commitlint.config.js
+.eslintrc.js

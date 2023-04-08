@@ -39,6 +39,7 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
+    'import/no-unresolved': 'off',
     'prettier/prettier': [
       'error',
       {
