@@ -3,3 +3,4 @@
 
 echo "Running pre-commit hook..."
 npx --no-install lint-staged
+npx --no-install git-precommit-checks

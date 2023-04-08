@@ -18,6 +18,11 @@ nvm install 18
 nvm use 18
 ```
 
+### Warning:
+
+If you are using IntelliJ, you need to point to you node executable in the settings
+`File > Settings > Languages & Frameworks > Node.js and NPM > Node interpreter`
+
 ## Install Angular CLI
 
 ```shell
@@ -72,7 +77,7 @@ ng lint
 
 ## Commit hooks
 
-Husky
+See [Husky](https://typicode.github.io/husky/#/)
 
 ```shell
 npm i -D husky
@@ -81,6 +86,8 @@ npm run prepare
 ```
 
 ### lint-staged
+
+https://github.com/okonet/lint-staged
 
 ```shell
 npm i -D lint-staged
@@ -98,10 +105,16 @@ module.exports = {
 };
 ```
 
-### Warning:
+## Git Pre Commit Checks
 
-If you are using IntelliJ, you need to point to you node executable in the settings
-`File > Settings > Languages & Frameworks > Node.js and NPM > Node interpreter`
+https://github.com/mbrehin/git-precommit-checks
+
+```shell
+npm i -D git-pre-commit-checks
+npx husky add .husky/pre-commit "npx --no-install git-pre-commit-checks"
+```
+
+Add file `.git-pre-commit-checks.js`
 
 # Angular General
 

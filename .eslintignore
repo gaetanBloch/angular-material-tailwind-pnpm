@@ -5,3 +5,4 @@ target/
 **/*.html
 **/*.scss
 **/*.spec.ts
+git-precommit-checks.config.js
