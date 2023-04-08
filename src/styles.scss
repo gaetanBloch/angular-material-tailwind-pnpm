@@ -2,6 +2,7 @@
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
+@use './utils' as utils;
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -12,20 +13,77 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 
-// @SuppressWarnings("unknown")
-$nx-storybook-angular-material-primary: mat.define-palette(mat.$indigo-palette);
-$nx-storybook-angular-material-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
+$dark-primary-text: rgba(black, 0.87);
+$light-primary-text: white;
+$custom-palette: (
+  50: #fae1e5,
+  100: #f3b4bf,
+  200: #ec8294,
+  300: #e45069,
+  400: #de2b49,
+  500: #d80529,
+  600: #d40424,
+  700: #ce041f,
+  800: #c80319,
+  900: #bf010f,
+  A100: #ffe7e8,
+  A200: #ffb4b7,
+  A400: #ff8185,
+  A700: #ff686d,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text,
+  ),
+);
+// You can check the predefined palettes here:
+// node_modules/@angular/material/core/theming/_palette.scss
+// And the theming API here:
+// node_modules/@angular/material/core/theming/_theming.scss
+
+$nx-storybook-angular-material-primary: mat.define-palette($custom-palette);
+$nx-storybook-angular-material-accent: mat.define-palette(mat.$blue-grey-palette, A200, A100, A400);
+
+// Light theme
+$nx-storybook-angular-material-primary-light: mat.define-palette(mat.$indigo-palette);
+$nx-storybook-angular-material-accent-light: mat.define-palette($custom-palette);
 
 // The warn palette is optional (defaults to red).
 $nx-storybook-angular-material-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$nx-storybook-angular-material-theme: mat.define-light-theme(
+$nx-storybook-angular-material-theme: mat.define-dark-theme(
   (
     color: (
       primary: $nx-storybook-angular-material-primary,
       accent: $nx-storybook-angular-material-accent,
+      warn: $nx-storybook-angular-material-warn,
+    ),
+    // Only include `typography` and `density` in the default dark theme.
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// Light theme
+$theme-light: mat.define-light-theme(
+  (
+    color: (
+      primary: $nx-storybook-angular-material-primary-light,
+      accent: $nx-storybook-angular-material-accent-light,
       warn: $nx-storybook-angular-material-warn,
     ),
   )
@@ -34,7 +92,18 @@ $nx-storybook-angular-material-theme: mat.define-light-theme(
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
+@include mat.core-theme($nx-storybook-angular-material-theme);
 @include mat.all-component-themes($nx-storybook-angular-material-theme);
+@include utils.color($nx-storybook-angular-material-theme);
+
+// Apply the light theme only when the user prefers light themes.
+@media (prefers-color-scheme: light) {
+  // Use the `-color` mixins to only apply color styles without reapplying the same
+  // typography and density styles.
+  @include mat.core-theme($theme-light);
+  @include mat.all-component-themes($theme-light);
+  @include utils.color($theme-light);
+}
 
 /* You can add global styles to this file, and also import other style files */
 
