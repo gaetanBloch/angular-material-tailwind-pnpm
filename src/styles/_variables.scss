@@ -111,4 +111,21 @@
   --contrast-A200: mat.$dark-primary-text;
   --contrast-A400: mat.$dark-primary-text;
   --contrast-A700: mat.$dark-primary-text;
+
+  .neon-theme {
+    --primary-50: #e1faf6;
+    --primary-100: #b4f4e9;
+    --primary-200: #82ecdb;
+    --primary-300: #4fe4cc;
+    --primary-400: #2adfc1;
+    --primary-500: #04d9b6;
+    --primary-600: #03d5af;
+    --primary-700: #03cfa6;
+    --primary-800: #02ca9e;
+    --primary-900: #01c08e;
+    --primary-A100: #e9fff8;
+    --primary-A200: #b6ffe9;
+    --primary-A400: #83ffda;
+    --primary-A700: #69ffd2;
+  }
 }

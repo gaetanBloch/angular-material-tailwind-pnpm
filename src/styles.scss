@@ -5,11 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply transition-colors;
+}
 html,
 body {
-  height: 100%;
+  @apply h-full;
 }
 body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  @apply m-0;
+  @apply font-sans;
 }
