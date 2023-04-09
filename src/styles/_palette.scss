@@ -1,0 +1,107 @@
+// You can check the predefined palettes here:
+// node_modules/@angular/material/core/theming/_palette.scss
+// And the theming API here:
+// node_modules/@angular/material/core/theming/_theming.scss
+// https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
+
+$dark-primary-text: rgba(black, 0.87);
+$light-primary-text: white;
+
+$custom-palette-dark: (
+  50: #fae1e5,
+  100: #f3b4bf,
+  200: #ec8294,
+  300: #e45069,
+  400: #de2b49,
+  500: #d80529,
+  600: #d40424,
+  700: #ce041f,
+  800: #c80319,
+  900: #bf010f,
+  A100: #ffe7e8,
+  A200: #ffb4b7,
+  A400: #ff8185,
+  A700: #ff686d,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text,
+  ),
+);
+
+$custom-palette-accent-dark: (
+  50: #e1faf6,
+  100: #b4f4e9,
+  200: #82ecdb,
+  300: #4fe4cc,
+  400: #2adfc1,
+  500: #04d9b6,
+  600: #03d5af,
+  700: #03cfa6,
+  800: #02ca9e,
+  900: #01c08e,
+  A100: #e9fff8,
+  A200: #b6ffe9,
+  A400: #83ffda,
+  A700: #69ffd2,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text,
+  ),
+);
+
+$my-purple-palette: (
+  50: hsl(var(--hue), var(--saturation), 90%),
+  100: hsl(var(--hue), var(--saturation), 80%),
+  200: hsl(var(--hue), var(--saturation), 70%),
+  300: hsl(var(--hue), var(--saturation), 65%),
+  400: #b869c1,
+  500: hsl(var(--color-primary)),
+  600: #a447af,
+  700: #9a3da6,
+  800: #91359e,
+  900: #80258e,
+  A100: #f8ceff,
+  A200: #f19bff,
+  A400: #ea68ff,
+  A700: #e64eff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
