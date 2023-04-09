@@ -239,4 +239,29 @@ npx tailwindcss init
 ```
 
 This will create a `tailwind.config.js` file in the root of your project.
-cf [config](./tailwind.config.js)
+cf [config](tailwind.config.js)
+
+https://gist.github.com/nartc/f6757f6ad9037436270cb93734c196ac
+
+## Migrating to pnpm
+
+Let's migrate from npm to pnpm <br>
+[Guide](https://dev.to/andreychernykh/yarn-npm-to-pnpm-migration-guide-2n04) <br>
+[Video](https://www.youtube.com/watch?v=d1E31WPR70g&ab_channel=CoderOne)
+
+```shell
+npm i -g pnpm
+npx npkill # removes all node_modules
+pnpm import
+rm -f  package-lock.json
+pnpm i
+```
+
+## Install Cypress
+
+https://docs.cypress.io/guides/component-testing/angular/quickstart
+
+```shell
+npm i -D cypress
+npx cypress open
+```
