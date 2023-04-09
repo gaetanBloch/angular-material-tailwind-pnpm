@@ -1,12 +1,6 @@
-# nx-storybook-angular-material
+# Angular Material TailwindCSS pnpm
 
-Project that aims to provide developers with an easy way to utilize Storybook and Angular Material
-components together. It provides developers with access to pre-built Storybook components and allows
-them to quickly build their own custom components using the power of Angular Material.
-It also has a powerful build system built in that allows for automated building and deployment of
-applications. With its declarative syntax and flexible components, Nx-Stroybook-Angular-Material
-offers a streamlined workflow for creating beautiful front end applications quickly and easily.
-Developers can easily utilize existing code patterns, or create their own custom designs with ease.
+This project is built using Angular 15, Angular Material, TailwindCSS and a custom theme. The purpose of the project is to create a feature-rich web application with a modern UI. The user interface will be built with Angular Material components and customized with TailwindCSS styles.
 
 # Initialisation
 
