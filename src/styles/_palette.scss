@@ -4,125 +4,286 @@
 // node_modules/@angular/material/core/theming/_theming.scss
 // https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
 
+@use 'variables';
+
 $dark-primary-text: rgba(black, 0.87);
 $light-primary-text: white;
 
+$primary-50: var(--primary-50);
+$primary-100: var(--primary-100);
+$primary-200: var(--primary-200);
+$primary-300: var(--primary-300);
+$primary-400: var(--primary-400);
+$primary-500: var(--primary-500);
+$primary-600: var(--primary-600);
+$primary-700: var(--primary-700);
+$primary-800: var(--primary-800);
+$primary-900: var(--primary-900);
+$primary-A100: var(--primary-A100);
+$primary-A200: var(--primary-A200);
+$primary-A400: var(--primary-A400);
+$primary-A700: var(--primary-A700);
+
+$secondary-50: var(--secondary-50);
+$secondary-100: var(--secondary-100);
+$secondary-200: var(--secondary-200);
+$secondary-300: var(--secondary-300);
+$secondary-400: var(--secondary-400);
+$secondary-500: var(--secondary-500);
+$secondary-600: var(--secondary-600);
+$secondary-700: var(--secondary-700);
+$secondary-800: var(--secondary-800);
+$secondary-900: var(--secondary-900);
+$secondary-A100: var(--secondary-A100);
+$secondary-A200: var(--secondary-A200);
+$secondary-A400: var(--secondary-A400);
+$secondary-A700: var(--secondary-A700);
+
+$tertiary-50: var(--tertiary-50);
+$tertiary-100: var(--tertiary-100);
+$tertiary-200: var(--tertiary-200);
+$tertiary-300: var(--tertiary-300);
+$tertiary-400: var(--tertiary-400);
+$tertiary-500: var(--tertiary-500);
+$tertiary-600: var(--tertiary-600);
+$tertiary-700: var(--tertiary-700);
+$tertiary-800: var(--tertiary-800);
+$tertiary-900: var(--tertiary-900);
+$tertiary-A100: var(--tertiary-A100);
+$tertiary-A200: var(--tertiary-A200);
+$tertiary-A400: var(--tertiary-A400);
+$tertiary-A700: var(--tertiary-A700);
+
+$accent-50: var(--accent-50);
+$accent-100: var(--accent-100);
+$accent-200: var(--accent-200);
+$accent-300: var(--accent-300);
+$accent-400: var(--accent-400);
+$accent-500: var(--accent-500);
+$accent-600: var(--accent-600);
+$accent-700: var(--accent-700);
+$accent-800: var(--accent-800);
+$accent-900: var(--accent-900);
+$accent-A100: var(--accent-A100);
+$accent-A200: var(--accent-A200);
+$accent-A400: var(--accent-A400);
+$accent-A700: var(--accent-A700);
+
+$warn-50: var(--warn-50);
+$warn-100: var(--warn-100);
+$warn-200: var(--warn-200);
+$warn-300: var(--warn-300);
+$warn-400: var(--warn-400);
+$warn-500: var(--warn-500);
+$warn-600: var(--warn-600);
+$warn-700: var(--warn-700);
+$warn-800: var(--warn-800);
+$warn-900: var(--warn-900);
+$warn-A100: var(--warn-A100);
+$warn-A200: var(--warn-A200);
+$warn-A400: var(--warn-A400);
+$warn-A700: var(--warn-A700);
+
+$error-50: var(--error-50);
+$error-100: var(--error-100);
+$error-200: var(--error-200);
+$error-300: var(--error-300);
+$error-400: var(--error-400);
+$error-500: var(--error-500);
+$error-600: var(--error-600);
+$error-700: var(--error-700);
+$error-800: var(--error-800);
+$error-900: var(--error-900);
+$error-A100: var(--error-A100);
+$error-A200: var(--error-A200);
+$error-A400: var(--error-A400);
+$error-A700: var(--error-A700);
+
 $primary-palette: (
-  50: #fae1e5,
-  100: #f3b4bf,
-  200: #ec8294,
-  300: #e45069,
-  400: #de2b49,
-  500: #d80529,
-  600: #d40424,
-  700: #ce041f,
-  800: #c80319,
-  900: #bf010f,
-  A100: #ffe7e8,
-  A200: #ffb4b7,
-  A400: #ff8185,
-  A700: #ff686d,
+  50: $primary-50,
+  100: $primary-100,
+  200: $primary-200,
+  300: $primary-300,
+  400: $primary-400,
+  500: $primary-500,
+  600: $primary-600,
+  700: $primary-700,
+  800: $primary-800,
+  900: $primary-900,
+  A100: $primary-A100,
+  A200: $primary-A200,
+  A400: $primary-A400,
+  A700: $primary-A700,
   contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $light-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $dark-primary-text,
-    A400: $dark-primary-text,
-    A700: $light-primary-text,
+    50: var(--secondary-contrast-50, $dark-primary-text),
+    100: var(--secondary-contrast-100, $dark-primary-text),
+    200: var(--secondary-contrast-200, $dark-primary-text),
+    300: var(--secondary-contrast-300, $dark-primary-text),
+    400: var(--secondary-contrast-400, $dark-primary-text),
+    500: var(--secondary-contrast-500, $light-primary-text),
+    600: var(--secondary-contrast-600, $light-primary-text),
+    700: var(--secondary-contrast-700, $light-primary-text),
+    800: var(--secondary-contrast-800, $light-primary-text),
+    900: var(--secondary-contrast-900, $light-primary-text),
+    A100: var(--secondary-contrast-A100, $dark-primary-text),
+    A200: var(--secondary-contrast-A200, $dark-primary-text),
+    A400: var(--secondary-contrast-A400, $dark-primary-text),
+    A700: var(--secondary-contrast-A700, $light-primary-text),
   ),
 );
 
+// Generate accent palette
 $accent-palette: (
-  50: #e1faf6,
-  100: #b4f4e9,
-  200: #82ecdb,
-  300: #4fe4cc,
-  400: #2adfc1,
-  500: #04d9b6,
-  600: #03d5af,
-  700: #03cfa6,
-  800: #02ca9e,
-  900: #01c08e,
-  A100: #e9fff8,
-  A200: #b6ffe9,
-  A400: #83ffda,
-  A700: #69ffd2,
+  50: $accent-50,
+  100: $accent-100,
+  200: $accent-200,
+  300: $accent-300,
+  400: $accent-400,
+  500: $accent-500,
+  600: $accent-600,
+  700: $accent-700,
+  800: $accent-800,
+  900: $accent-900,
+  A100: $accent-A100,
+  A200: $accent-A200,
+  A400: $accent-A400,
+  A700: $accent-A700,
   contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $light-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $dark-primary-text,
-    A400: $dark-primary-text,
-    A700: $light-primary-text,
+    50: var(--secondary-contrast-50, $dark-primary-text),
+    100: var(--secondary-contrast-100, $dark-primary-text),
+    200: var(--secondary-contrast-200, $dark-primary-text),
+    300: var(--secondary-contrast-300, $dark-primary-text),
+    400: var(--secondary-contrast-400, $dark-primary-text),
+    500: var(--secondary-contrast-500, $light-primary-text),
+    600: var(--secondary-contrast-600, $light-primary-text),
+    700: var(--secondary-contrast-700, $light-primary-text),
+    800: var(--secondary-contrast-800, $light-primary-text),
+    900: var(--secondary-contrast-900, $light-primary-text),
+    A100: var(--secondary-contrast-A100, $dark-primary-text),
+    A200: var(--secondary-contrast-A200, $dark-primary-text),
+    A400: var(--secondary-contrast-A400, $dark-primary-text),
+    A700: var(--secondary-contrast-A700, $light-primary-text),
   ),
 );
 
 // Generate warn palette
 $warn-palette: (
-  50: #fff3e0,
-  100: #ffe0b2,
-  200: #ffcc80,
-  300: #ffb74d,
-  400: #ffa726,
-  500: #ff9800,
-  600: #fb8c00,
-  700: #f57c00,
-  800: #ef6c00,
-  900: #e65100,
-  A100: #ffd180,
-  A200: #ffab40,
-  A400: #ff9100,
-  A700: #ff6d00,
+  50: $warn-50,
+  100: $warn-100,
+  200: $warn-200,
+  300: $warn-300,
+  400: $warn-400,
+  500: $warn-500,
+  600: $warn-600,
+  700: $warn-700,
+  800: $warn-800,
+  900: $warn-900,
+  A100: $warn-A100,
+  A200: $warn-A200,
+  A400: $warn-A400,
+  A700: $warn-A700,
   contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $light-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $dark-primary-text,
-    A400: $dark-primary-text,
-    A700: $light-primary-text,
+    50: var(--secondary-contrast-50, $dark-primary-text),
+    100: var(--secondary-contrast-100, $dark-primary-text),
+    200: var(--secondary-contrast-200, $dark-primary-text),
+    300: var(--secondary-contrast-300, $dark-primary-text),
+    400: var(--secondary-contrast-400, $dark-primary-text),
+    500: var(--secondary-contrast-500, $light-primary-text),
+    600: var(--secondary-contrast-600, $light-primary-text),
+    700: var(--secondary-contrast-700, $light-primary-text),
+    800: var(--secondary-contrast-800, $light-primary-text),
+    900: var(--secondary-contrast-900, $light-primary-text),
+    A100: var(--secondary-contrast-A100, $dark-primary-text),
+    A200: var(--secondary-contrast-A200, $dark-primary-text),
+    A400: var(--secondary-contrast-A400, $dark-primary-text),
+    A700: var(--secondary-contrast-A700, $light-primary-text),
   ),
 );
 
 // Generate error palette
 $error-palette: (
-  50: #ffebee,
-  100: #ffcdd2,
-  200: #ef9a9a,
-  300: #e57373,
-  400: #ef5350,
-  500: #f44336,
-  600: #e53935,
-  700: #d32f2f,
-  800: #c62828,
-  900: #b71c1c,
-  A100: #ff8a80,
-  A200: #ff5252,
-  A400: #ff1744,
-  A700: #d50000,
+  50: $error-50,
+  100: $error-100,
+  200: $error-200,
+  300: $error-300,
+  400: $error-400,
+  500: $error-500,
+  600: $error-600,
+  700: $error-700,
+  800: $error-800,
+  900: $error-900,
+  A100: $error-A100,
+  A200: $error-A200,
+  A400: $error-A400,
+  A700: $error-A700,
+  contrast: (
+    50: var(--secondary-contrast-50, $dark-primary-text),
+    100: var(--secondary-contrast-100, $dark-primary-text),
+    200: var(--secondary-contrast-200, $dark-primary-text),
+    300: var(--secondary-contrast-300, $dark-primary-text),
+    400: var(--secondary-contrast-400, $dark-primary-text),
+    500: var(--secondary-contrast-500, $light-primary-text),
+    600: var(--secondary-contrast-600, $light-primary-text),
+    700: var(--secondary-contrast-700, $light-primary-text),
+    800: var(--secondary-contrast-800, $light-primary-text),
+    900: var(--secondary-contrast-900, $light-primary-text),
+    A100: var(--secondary-contrast-A100, $dark-primary-text),
+    A200: var(--secondary-contrast-A200, $dark-primary-text),
+    A400: var(--secondary-contrast-A400, $dark-primary-text),
+    A700: var(--secondary-contrast-A700, $light-primary-text),
+  ),
+);
+
+// Generate secondary palette
+$secondary-palette: (
+  50: $secondary-50,
+  100: $secondary-100,
+  200: $secondary-200,
+  300: $secondary-300,
+  400: $secondary-400,
+  500: $secondary-500,
+  600: $secondary-600,
+  700: $secondary-700,
+  800: $secondary-800,
+  900: $secondary-900,
+  A100: $secondary-A100,
+  A200: $secondary-A200,
+  A400: $secondary-A400,
+  A700: $secondary-A700,
+  contrast: (
+    50: var(--secondary-contrast-50, $dark-primary-text),
+    100: var(--secondary-contrast-100, $dark-primary-text),
+    200: var(--secondary-contrast-200, $dark-primary-text),
+    300: var(--secondary-contrast-300, $dark-primary-text),
+    400: var(--secondary-contrast-400, $dark-primary-text),
+    500: var(--secondary-contrast-500, $light-primary-text),
+    600: var(--secondary-contrast-600, $light-primary-text),
+    700: var(--secondary-contrast-700, $light-primary-text),
+    800: var(--secondary-contrast-800, $light-primary-text),
+    900: var(--secondary-contrast-900, $light-primary-text),
+    A100: var(--secondary-contrast-A100, $dark-primary-text),
+    A200: var(--secondary-contrast-A200, $dark-primary-text),
+    A400: var(--secondary-contrast-A400, $dark-primary-text),
+    A700: var(--secondary-contrast-A700, $light-primary-text),
+  ),
+);
+
+// Generate tertiary palette
+$tertiary-palette: (
+  50: $tertiary-50,
+  100: $tertiary-100,
+  200: $tertiary-200,
+  300: $tertiary-300,
+  400: $tertiary-400,
+  500: $tertiary-500,
+  600: $tertiary-600,
+  700: $tertiary-700,
+  800: $tertiary-800,
+  900: $tertiary-900,
+  A100: $tertiary-A100,
+  A200: $tertiary-A200,
+  A400: $tertiary-A400,
+  A700: $tertiary-A700,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -138,38 +299,5 @@ $error-palette: (
     A200: $dark-primary-text,
     A400: $dark-primary-text,
     A700: $light-primary-text,
-  ),
-);
-
-$my-purple-palette: (
-  50: hsl(var(--hue), var(--saturation), 90%),
-  100: hsl(var(--hue), var(--saturation), 80%),
-  200: hsl(var(--hue), var(--saturation), 70%),
-  300: hsl(var(--hue), var(--saturation), 65%),
-  400: #b869c1,
-  500: hsl(var(--color-primary)),
-  600: #a447af,
-  700: #9a3da6,
-  800: #91359e,
-  900: #80258e,
-  A100: #f8ceff,
-  A200: #f19bff,
-  A400: #ea68ff,
-  A700: #e64eff,
-  contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #ffffff,
-    600: #ffffff,
-    700: #ffffff,
-    800: #ffffff,
-    900: #ffffff,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
   ),
 );
